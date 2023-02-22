@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{>header}}
+</head>
+
+<body>
+  {{>navbar}}
+
+
+  <div class="container-fluid main_header">
+    <div class="row">
+      <div class="col-md-10 col-12 mx-auto">
+        <div class="main-content">
+          <form action="" class="temp_form">
+            <input type="text" id="cityname" placeholder="Enter Your City Name" autocomplete="off">
+            <input type="submit" value="Search" id="btnsubmit">
+          </form>
+        </div>
+        <div class="tempinfo">
+          <div class="top">
+            <p id="day">Thursday</p>
+            <p id="today"><span id="da">1</span> <span id="sp">Nov</span></p>
+          </div>
+          <div class="main_layer">
+            <p id="city_name">Get Output Here</p>
+            <div class="middle_layer data_hide">
+              <p id="temp"><span id="tempreal">0</span><sup>o</sup>C</p>
+              <p id="temp_status"> <i class="fa-solid fa-cloud"></i> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<h1 style="text-align:center;justify-content:center;font-weight:bold;margin-bottom :30px;margin-top:-75px;  text-decoration: underline solid;">City Temperatures</h1>
+
+  {{!-- Other --}}
+  <div class="container-fluid" style="margin-top: -10px;">
+    <div class="row" >
+      <div class="col-md-10 col-12 mx-auto" >
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" >
+          <div class="col" >
+            <div class="card mb-4 rounded-3 shadow-sm ">
+              <div class="card-header py-3 text-white bg-dark " >
+                <h4 class="my-0 fw-normal" style="font-weight: bold;font-size:2rem">Pune</h4>
+              </div>
+              <div class="card-body" id="pune">
+              
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3 text-white bg-dark">
+                <h4 class="my-0 fw-normal" style="font-weight: bold;font-size:2rem">Delhi</h4>
+              </div>
+              <div class="card-body" id="delhi">
+              
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm ">
+              <div class="card-header py-3 text-white bg-dark">
+                <h4 class="my-0 fw-normal" style="font-weight: bold;font-size:2rem">Mumbai</h4>
+              </div>
+              <div class="card-body " id="mumbai">
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    {{>footer}}
+
+    <script src="js/main.js"></script>
+    <script src="js/main2.js"></script>
+
+    <script>
+      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+      const d = new Date();
+      let day = days[d.getDay()];
+      document.getElementById("day").innerHTML = day;
+
+      const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+      const di = new Date();
+      let month = months[di.getMonth()];
+      document.getElementById("sp").innerHTML = month;
+
+
+      const dip = new Date();
+      document.getElementById("da").innerHTML = dip.getDate();
+
+    </script>
+
+</body>
+
+</html>

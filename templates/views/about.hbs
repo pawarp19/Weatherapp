@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+</head>
+
+<body>
+    {{>navbar}}
+
+
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+                    <div class="col-md-6 col-12 main_header_right">
+                        <figure>
+                            <img src="images/ab.png" alt="" class="img-fluid" title="">
+                        </figure>
+                    </div>
+                    <div class="col-md-6 col-12 main_header_left">
+                        <p style="font-weight: bold;">Welcome to My Website</p>
+                        <h1>I'm A <span class="auto-type" style="color: blue; font-weight:500;"></span> </h1>                        
+                        <a href="https://www.linkedin.com/in/pranav-pawar19" target="_blank"><button>About Me
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{>footer}}
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+        var typed=new Typed(".auto-type",{
+            strings:["Web-Developer","Coder","Learner"],
+            typeSpeed:150,
+            backSpeed:150,
+            loop:true
+        })
+    </script>
+    
+
+</body>
+
+</html>

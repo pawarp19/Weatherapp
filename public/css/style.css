@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caladea:ital@1&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height:110vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Caladea', serif;
+}
+
+html{
+    font-size: 62.5%;
+    /* 1rem=10px */
+}
+.row{
+    margin: 0;
+}
+
+.main_menu{
+    background-color: black;
+}
+
+.navbar{
+    color: #fff;
+    background-color: black;
+    padding: 1.6rem 0;
+    font-family: 'Merienda One', cursive;    
+}
+
+.navbar-brand
+{
+    font-size: 1.7rem;
+}
+
+.navbar li{
+    margin-left: 2.5rem;
+    font-size: 1.5rem;
+}
+.navbar a{
+    color: #fff;
+}
+
+nav .navbar-brand{
+    color: rgb(14, 111, 209); 
+}
+.navbar a:hover{
+    color: rgb(7, 128, 248);
+}
+.navbar-toggler
+{
+    background-color: rgb(54, 51, 51);
+}
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color: blue;
+}
+
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.main_header_left{
+    height:70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main_header_left p{
+    font-size: 2.8rem;
+    margin:1rem 0 4rem 0;
+    text-transform: capitalize;
+
+}
+
+.main_header_left h1{
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+
+.main_header_left button{
+    border: none;
+    padding:0.8rem 1.8rem;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    box-shadow: 06px 6px 6px #2b2929;
+    outline: none;
+    color: rgb(59, 83, 205);
+    font-weight: 600;
+}
+
+.main_header_left button:hover{
+    box-shadow: 05px 5px 6px rgb(30, 29, 29);
+    background-color: rgb(169, 164, 164);
+}
+
+.main_header_left .we{
+    color: rgb(59, 83, 205);
+    font-weight: 500;
+}
+.main_header_right{
+    height:70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer{
+    width: 100%;
+    background-color: black;
+    margin-top: auto;
+}
+footer p{
+    margin: 0;
+    text-align: center;
+    color: white;
+    line-height: 4rem;
+    font-size: 1.3rem;   
+}
+
+@media(max-width:768px){
+    .main_header_left{
+        height: auto;
+        margin: 5rem 0;
+
+    }
+    .main_header_right{
+        height: auto;
+        margin: 3rem 0;
+        
+    }
+}
+
+.main_header_right figure img{
+    filter: drop-shadow(0 0.5rem 3rem rgba(0,0,0,0.3));
+    height: 48rem;
+}
+
+.errimg img{
+    width: 60rem;
+    height: 40rem;
+    background-color: white;
+}
+
+/*weather*/
+
+.temp_form{
+    width: 60%;
+    position: relative;
+    margin: 9rem auto 6rem;
+}
+
+.temp_form input[type="text"]{
+    width: 100%;
+    padding: 1.5rem 5rem 1.5rem 1.5rem;
+    background: #1e202b;
+    color: white;
+    border-radius: 2.5rem;
+    outline: none;
+    font-size: 1.5rem;
+    border: none;
+    text-transform:capitalize;
+}
+
+::placeholder{
+    color: #bfc1c8;
+
+}
+
+.temp_form input[type="submit"]
+{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    bottom: 7px;
+    border: none;
+    background: #3bb6e7;
+    padding: 0 2.5rem;
+    border-radius: 2.5rem;
+    color: #dddee2;
+    font-size: 1.5rem;
+}
+
+.temp_form input[type="submit"]:hover{
+    background-color: #009ad8;
+    color: white;
+}
+
+.tempinfo{
+    width: 45rem;
+    margin: auto;
+    background-color: #323544;
+    min-height: 30rem;
+    border-radius: 1rem;
+    /* padding: 2rem 0; */
+    padding-bottom: 3rem;
+    margin-bottom: 18rem;
+
+}
+
+.top{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2d303d;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.top p{
+    color: white;
+    font-weight: 300;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.main_layer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.main_layer #city_name{
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.main_layer .middle_layer{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa-solid{
+    font-size: 7rem;
+    font-weight: 900;
+}
+
+.fa-solid{
+    color: #009ad8;
+}
+
+sup{
+    font-size: 6rem;
+    margin-top: -2rem;
+}
+
+.data_hide{
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+
+
+#pune,#mumbai,#delhi{
+    font-size: 1.5rem;
+    background-color: #2d303d;
+    color: white;
+    height: 15rem;
+}
+
+
